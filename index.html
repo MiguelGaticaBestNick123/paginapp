@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xXAuTh3ntIcACi0nXx</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .center-vertically {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <main>
+        <section class="presentacion center-vertically">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="titulo-psicodelico">Logueate para generar el CAPTCHA</h1>
+                        <img class="mb-4 logo rounded d-block mx-auto" src="assets/img/f69852d48d58bf8e54be96783fbd6932.jpg" alt="" width="120" height="57">    
+                        <form class="w-50 mx-auto container-bg" id="login-form"> <!-- Agregamos el ID "login-form" al formulario -->
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="nombre@correo.com">
+                                <label for="email">Correo electrónico</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Contraseña">
+                                <label for="password">Contraseña</label>
+                            </div>
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Recuérdame
+                                </label>
+                            </div>
+                            <button class="w-100 btn btn-lg btn-secondary transparencia" type="submit">Iniciar sesión</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Función para manejar el envío del formulario
+        document.getElementById("login-form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Evita que se envíe el formulario
+    
+            // Obtiene los valores ingresados por el usuario
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+    
+            // Verifica si las credenciales son nulas o vacías
+            if (!email || !password) {
+                alert("Por favor, ingresa las credenciales.");
+                return; // Sale de la función si las credenciales son nulas o vacías
+            }
+    
+            // Comprueba las credenciales
+            if (email === "ale.sepulveda@duocuc.cl" && password === "wacoldo") {
+                // Redirige al usuario a captcha.html si las credenciales son correctas
+                window.location.href = "captcha.html";
+            } else {
+                // Muestra un mensaje de advertencia si las credenciales son incorrectas
+                alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
+            }
+        });
+    </script>
+    
+</body>
+
+</html>

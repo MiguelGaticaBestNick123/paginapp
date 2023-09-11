@@ -1,0 +1,20 @@
+body {
+    background-image: url(../img/wallpaperflare.com_wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* Esto asegura que el fondo cubra toda la altura del viewport */
+    background-color: rgba(169, 169, 169, 0.112)!important; /* Cambia la transparencia al pasar el cursor */
+
+}
+h1{
+    font-family: 'Bangers', sans-serif;
+    
+}
+.qr {
+    border: 5px solid #3498db; /* Color y grosor del borde */
+    border-radius: 20px; /* Borde redondeado */
+    padding: 20px; /* Espacio entre el borde y la imagen */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    background-color: #ffffff; /* Color de fondo del código QR */
+}
